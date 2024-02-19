@@ -1,0 +1,5 @@
+<!--index.maml-->
+<view class="container">
+    <text>{{motto}}</text>
+</view>
+

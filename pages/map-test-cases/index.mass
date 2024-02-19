@@ -1,0 +1,18 @@
+@import "../common/weui.mass";
+
+.container {
+  align-items: center;
+}
+
+ma-map {
+  width: 100%;
+  height: 300px;
+}
+
+/* @龚改 */
+/* 屏蔽街景小人控件 */
+/* .gm-style-mtc,
+.gm-svpc,
+.gm-style-cc {
+  display: none;
+} */

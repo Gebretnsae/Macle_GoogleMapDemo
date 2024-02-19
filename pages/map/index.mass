@@ -1,0 +1,11 @@
+@import "../common/weui.mass";
+
+.container {
+  align-items: center;
+}
+
+.gm-style-mtc,
+.gm-svpc,
+.gm-style-cc {
+  display: none;
+}

@@ -1,0 +1,117 @@
+  <import src="../common/head.maml" />
+  <import src="../common/foot.maml" />
+  <view class="container">
+      <!-- <template is="head" data="{{title: 'map组件'}}" /> -->
+      <map id="myMap" show-location="{{mapProps.showLocation}}" scale="{{mapProps.scale}}" markers="{{mapProps.markers}}" polyline="{{mapProps.polyline}}" longitude="{{mapProps.longitude}}" latitude="{{mapProps.latitude}}" include-points="{{mapProps.includePoints}}" circles="{{mapProps.circles}}" bindmarkertap="markerTap" bindtap="mapTap"></map>
+      <!-- 数据 -->
+      <scroll-view scroll-y="true" class="scroll-view" style="height: {{scrollViewHeight}}px; border-top: 3px solid #fff" enhanced="true" show-scrollbar="true">
+          <view class="btn-area" style="margin-top: 0px;">
+              <button class="showData" bindtap="showData" type='primary'>展示数据</button>
+          </view>
+          <view class="page-body">
+              <view class="page-section">
+                  <view class="page-section-title">组件选项更新：基本属性</view>
+                  <block ma:for="{{updatedPropsInputs}}" ma:key="{{item.prop}}">
+                      <maui-field id="{{item.prop}}" label="{{item.label}}" bindinput="bindPropUpdate" type="{{item.type || 'text'}}" placeholder="{{item.placeholder || '请输入'}}" name="{{item.prop}}" value="{{updatedProps[item.prop]}}" data-targetObj="updatedProps" data-targetProp="{{item.prop}}" data-inputConfig="{{item}}"></maui-field>
+                  </block>
+                  <view class="btn-area" style="margin-top: 0px;">
+                      <button type='primary' bindtap="triggerPropsUpdate">更新参数</button>
+                  </view>
+              </view>
+              <view class="page-section">
+                  <view class="weui-cells__title">测试用例</view>
+                  <view class="weui-cells weui-cells_after-title">
+                      <view class="weui-cell weui-cell_input">
+                          <view class="weui-cell__hd">
+                              <view class="weui-label">longitude/latitude</view>
+                          </view>
+                          <view class="weui-cell__bd">
+                              <picker name="picker1" headerText='标题' bindchange="bindMapDataPickerChange" value="{{index}}" range-key="title" range="{{latlngCases}}" data-target-arr="latlngCases" data-target-map-prop="markers">
+                                  <view class="weui-input">{{latlngCases[index].title}}</view>
+                              </picker>
+                          </view>
+                      </view>
+                      <view class="weui-cell weui-cell_input">
+                          <view class="weui-cell__hd">
+                              <view class="weui-label">scale</view>
+                          </view>
+                          <view class="weui-cell__bd">
+                              <picker name="picker1" headerText='标题' bindchange="bindMapDataPickerChange" value="{{index}}" range-key="title" range="{{scaleCases}}" data-target-arr="scaleCases" data-target-map-prop="markers">
+                                  <view class="weui-input">{{scaleCases[index].title}}</view>
+                              </picker>
+                          </view>
+                      </view>
+                      <view class="weui-cell weui-cell_input">
+                          <view class="weui-cell__hd">
+                              <view class="weui-label">includePoints</view>
+                          </view>
+                          <view class="weui-cell__bd">
+                              <picker name="picker1" headerText='标题' bindchange="bindMapDataPickerChange" value="{{index}}" range-key="title" range="{{includePointsCases}}" data-target-arr="includePointsCases" data-target-map-prop="markers">
+                                  <view class="weui-input">{{includePointsCases[index].title}}</view>
+                              </picker>
+                          </view>
+                      </view>
+                      <view class="weui-cell weui-cell_input">
+                          <view class="weui-cell__hd">
+                              <view class="weui-label">Markers</view>
+                          </view>
+                          <view class="weui-cell__bd">
+                              <picker name="picker1" headerText='标题' bindchange="bindMapDataPickerChange" value="{{index}}" range-key="title" range="{{markersCases}}" data-target-arr="markersCases" data-target-map-prop="markers">
+                                  <view class="weui-input">{{markersCases[index].title}}</view>
+                              </picker>
+                          </view>
+                      </view>
+                      <view class="weui-cell weui-cell_input">
+                          <view class="weui-cell__hd">
+                              <view class="weui-label">Circles</view>
+                          </view>
+                          <view class="weui-cell__bd">
+                              <picker name="picker1" headerText='标题' bindchange="bindMapDataPickerChange" value="{{index}}" range-key="title" range="{{circleCases}}" data-target-arr="circleCases" data-target-map-prop="markers">
+                                  <view class="weui-input">{{circleCases[index].title}}</view>
+                              </picker>
+                          </view>
+                      </view>
+                      <view class="weui-cell weui-cell_input">
+                          <view class="weui-cell__hd">
+                              <view class="weui-label">Polyline</view>
+                          </view>
+                          <view class="weui-cell__bd">
+                              <picker name="picker1" headerText='标题' bindchange="bindPickerChange" value="{{index}}" range-key="title" range="{{polylineCases}}" data-target-arr="polylineCases" data-target-map-prop="polyline">
+                                  <view class="weui-input">{{polylineCases[index].title}}</view>
+                              </picker>
+                          </view>
+                      </view>
+                  </view>
+              </view>
+              <view class="page-section">
+                  <view class="page-section-title">组件选项更新：Marker</view>
+                  <block ma:for="{{markerInputs}}" ma:key="{{item.prop}}">
+                      <maui-field id="{{item.prop}}" label="{{item.label}}" bindinput="bindPropUpdate" type="{{item.type || 'text'}}" placeholder="{{item.placeholder || '请输入'}}" name="{{item.prop}}" value="{{marker[item.prop]}}" data-targetObj="marker" data-targetProp="{{item.prop}}" data-inputConfig="{{item}}"></maui-field>
+                  </block>
+                  <view class="btn-area" style="margin-top: 0px;">
+                      <button type='primary' bindtap="updateMarker">更新Marker</button>
+                  </view>
+              </view>
+              <view class="page-section">
+                  <view class="page-section-title">组件选项更新：Circle</view>
+                  <block ma:for="{{circleInputs}}" ma:key="{{item.prop}}">
+                      <maui-field id="{{item.prop}}" label="{{item.label}}" bindinput="bindPropUpdate" type="{{item.type || 'text'}}" placeholder="{{item.placeholder || '请输入'}}" name="{{item.prop}}" value="{{circle[item.prop]}}" data-targetObj="circle" data-targetProp="{{item.prop}}" data-inputConfig="{{item}}"></maui-field>
+                  </block>
+                  <view class="btn-area" style="margin-top: 0px;">
+                      <button type='primary' bindtap="updateCircle">更新Circle</button>
+                  </view>
+              </view>
+              <view class="page-section">
+                  <view class="page-section-title">地图事件</view>
+                  <block ma:for="{{targetLocationInputs}}" ma:key="{{item.prop}}">
+                      <maui-field id="{{item.prop}}" label="{{item.label}}" bindinput="bindPropUpdate" type="{{item.type || 'text'}}" placeholder="{{item.placeholder || '请输入'}}" name="{{item.prop}}" value="{{targetLocation[item.prop]}}" data-targetObj="targetLocation" data-targetProp="{{item.prop}}" data-inputConfig="{{item}}"></maui-field>
+                  </block>
+                  <view class="btn-area" style="margin-top: 0px;">
+                      <button type='primary' bindtap="moveToLocation">moveToLocation</button>
+                  </view>
+              </view>
+          </view>
+          <template is="foot" />
+      </scroll-view>
+  </view>
+

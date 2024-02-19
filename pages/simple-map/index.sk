@@ -1,0 +1,139 @@
+<template>
+  <div class='sk-container'>
+    <div class="sk_100_48_0_0" style="height: 48.0769%; width: 100.0186%; top: 0.0000%; left: 0.0000%; z-index: 999;"></div>
+    <div class="sk_22_2_50_4" style="height: 2.9815%; width: 22.4000%; top: 50.5199%; left: 4.0000%; z-index: 999;"></div>
+    <div class="sk_26_7_54_4" style="height: 7.4240%; width: 26.5891%; top: 54.6623%; left: 4.0000%; z-index: 999;"></div>
+    <div class="sk_63_7_54_32" style="height: 7.0513%; width: 63.6217%; top: 54.8636%; left: 32.0000%; z-index: 999;"></div>
+    <div class="sk_10_3_63_4" style="height: 3.5778%; width: 10.6543%; top: 63.9572%; left: 4.0000%; z-index: 999;"></div>
+    <div class="sk_63_7_62_32" style="height: 7.0513%; width: 63.6217%; top: 62.2354%; left: 32.0000%; z-index: 999;"></div>
+    <div class="sk_27_7_69_4" style="height: 7.4240%; width: 27.1132%; top: 69.4059%; left: 4.0000%; z-index: 999;"></div>
+    <div class="sk_63_7_69_32" style="height: 7.0513%; width: 63.6217%; top: 69.6072%; left: 32.0000%; z-index: 999;"></div>
+    <div class="sk_28_2_82_4" style="height: 2.9815%; width: 28.4062%; top: 82.0252%; left: 4.0000%; z-index: 999;"></div>
+    <div class="sk_25_3_87_4" style="height: 3.5778%; width: 25.7736%; top: 87.7702%; left: 4.0000%; z-index: 999;"></div>
+    <div class="sk_63_7_86_32" style="height: 7.0513%; width: 63.6217%; top: 86.0484%; left: 32.0000%; z-index: 999;"></div>
+    <div class="sk_27_7_93_4" style="height: 7.4240%; width: 27.4233%; top: 93.2189%; left: 4.0000%; z-index: 999;"></div>
+    <div class="sk_63_7_93_32" style="height: 7.0513%; width: 63.6217%; top: 93.4202%; left: 32.0000%; z-index: 999;"></div>
+    <div class="sk_27_7_100_4" style="height: 7.4240%; width: 27.0140%; top: 100.9112%; left: 4.0000%; z-index: 999;"></div>
+    <div class="sk_63_7_101_32" style="height: 7.0513%; width: 63.6217%; top: 101.1125%; left: 32.0000%; z-index: 999;"></div>
+        <div class="sk-loading-spinner" style="z-index: 999">
+      <div class="circular"></div>
+    </div>
+    <div class="sk_canvas" style="height: 100%; width: 100%; top: 0%; left: 0%; z-index: 990;"></div>
+  </div>
+</template>
+<style id="skeletonStyle">
+  .sk_100_48_0_0 {
+    background-color: #EFEFEF;
+    border-radius: 0px;
+    position: fixed;
+  }
+  .sk_22_2_50_4 {
+    background-image: linear-gradient(transparent 0%, #EFEFEF 0%, #EFEFEF 100%, transparent 0%) !important;
+    background-size: 100% 3.5897vh;
+    background-repeat: 'repeat-y' !important;
+    position: fixed !important;
+  }
+  .sk_26_7_54_4 {
+    background-image: linear-gradient(transparent 0%, #EFEFEF 0%, #EFEFEF 70.8300%, transparent 0%) !important;
+    background-size: 100% 3.8462vh;
+    background-repeat: 'repeat-y' !important;
+    position: fixed !important;
+  }
+  .sk_63_7_54_32 {
+    background-color: #EFEFEF;
+    border-radius: 0px;
+    position: fixed;
+  }
+  .sk_10_3_63_4 {
+    background-image: linear-gradient(transparent 0%, #EFEFEF 0%, #EFEFEF 100%, transparent 0%) !important;
+    background-size: 100% 3.8462vh;
+    background-repeat: 'repeat-y' !important;
+    position: fixed !important;
+  }
+  .sk_63_7_62_32 {
+    background-color: #EFEFEF;
+    border-radius: 0px;
+    position: fixed;
+  }
+  .sk_27_7_69_4 {
+    background-image: linear-gradient(transparent 0%, #EFEFEF 0%, #EFEFEF 70.8300%, transparent 0%) !important;
+    background-size: 100% 3.8462vh;
+    background-repeat: 'repeat-y' !important;
+    position: fixed !important;
+  }
+  .sk_63_7_69_32 {
+    background-color: #EFEFEF;
+    border-radius: 0px;
+    position: fixed;
+  }
+  .sk_28_2_82_4 {
+    background-image: linear-gradient(transparent 0%, #EFEFEF 0%, #EFEFEF 100%, transparent 0%) !important;
+    background-size: 100% 3.5897vh;
+    background-repeat: 'repeat-y' !important;
+    position: fixed !important;
+  }
+  .sk_25_3_87_4 {
+    background-image: linear-gradient(transparent 0%, #EFEFEF 0%, #EFEFEF 100%, transparent 0%) !important;
+    background-size: 100% 3.8462vh;
+    background-repeat: 'repeat-y' !important;
+    position: fixed !important;
+  }
+  .sk_63_7_86_32 {
+    background-color: #EFEFEF;
+    border-radius: 0px;
+    position: fixed;
+  }
+  .sk_27_7_93_4 {
+    background-image: linear-gradient(transparent 0%, #EFEFEF 0%, #EFEFEF 70.8300%, transparent 0%) !important;
+    background-size: 100% 3.8462vh;
+    background-repeat: 'repeat-y' !important;
+    position: fixed !important;
+  }
+  .sk_63_7_93_32 {
+    background-color: #EFEFEF;
+    border-radius: 0px;
+    position: fixed;
+  }
+  .sk_27_7_100_4 {
+    background-image: linear-gradient(transparent 0%, #EFEFEF 0%, #EFEFEF 70.8300%, transparent 0%) !important;
+    background-size: 100% 3.8462vh;
+    background-repeat: 'repeat-y' !important;
+    position: fixed !important;
+  }
+  .sk_63_7_101_32 {
+    background-color: #EFEFEF;
+    border-radius: 0px;
+    position: fixed;
+  }
+  
+  @keyframes animation-spin {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .sk-loading-spinner {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+  }
+  .sk-loading-spinner .circular {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    display: inline-block;
+    border: 2px solid #6d98f0;
+    border-top-color: transparent;
+    animation: animation-spin 1s linear infinite;
+  }
+    
+  .sk_canvas {
+    background-color: #FFF;
+    border-radius: 0;
+    position: fixed;
+  }
+</style>

@@ -1,0 +1,14 @@
+{
+  "name": "googlemapdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "macle-compiler-cli -s . -t ./root/app -d",
+    "build:simu": "macle-compiler-cli -s . -t D://project//Macle//showcase//repo//Macle//MacleSimulator//sdk//root//app -d",
+    "build:app": "macle-compiler-cli -s . -t ./root/app-release"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

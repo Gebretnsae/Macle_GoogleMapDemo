@@ -1,0 +1,7 @@
+{
+  "description": "project config file",
+  "projectname": "GoogleMapDemo",
+  "setting": {
+    "es5": false
+  }
+}

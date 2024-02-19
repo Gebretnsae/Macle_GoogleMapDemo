@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Field输入框",
+  "usingComponents": {
+    "maui-field": "../../components/field/index"
+  }
+}

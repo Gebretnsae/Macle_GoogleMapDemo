@@ -1,0 +1,60 @@
+  <import src="../common/head.maml" />
+  <import src="../common/foot.maml" />
+  <view class="container">
+      <template is="head" data="{{title: 'field'}}" />
+      <view class="page-body">
+          <view class="page-section">
+              <view class="page-section-title">基本用法</view>
+              <view>
+                  <maui-field label="文本" type="textarea" value="{{ value }}" placeholder="请输入文本" inputAlign="right" />
+              </view>
+          </view>
+          <view class="page-section">
+              <view class="page-section-title">自定义类型</view>
+              <view>
+                  <maui-field label="文本" value="{{ value }}" placeholder="请输入文本" />
+                  <maui-field label="手机号" value="{{ phoneNumber }}" placeholder="请输入手机号" />
+                  <maui-field label="身份证号" type="idcard" value="{{ ID}}" placeholder="请输入身份证号" />
+                  <maui-field label="密码" value="{{password}}" placeholder="请输入密码" password />
+                  <maui-field label="数字" type="digit" value="{{number}}" placeholder="请输入数字(支持小数)" />
+                  <maui-field label="整数" type="number" value="{{number}}" placeholder="请输入整数" />
+              </view>
+          </view>
+          <view class="page-section">
+              <view class="page-section-title">禁用输入框</view>
+              <view>
+                  <maui-field label="文本" value="{{ value }}" placeholder="输入框已禁用" disabled />
+              </view>
+          </view>
+          <view class="page-section">
+              <view class="page-section-title">错误提示</view>
+              <view>
+                  <maui-field label="用户名" value="{{ userName }}" placeholder="请输入用户名" error />
+                  <maui-field label="手机号" value="{{ phoneNumber }}" placeholder="请输入手机号" error-message="手机号格式错误" />
+                  <maui-field label="手机号" value="{{ phoneNumber }}" placeholder="请输入手机号" error-message="手机号格式错误（右对齐）" errorMessageAlign="right" />
+              </view>
+          </view>
+          <view class="page-section">
+              <view class="page-section-title">高度自适应</view>
+              <view>
+                  <maui-field label="自适应" value="{{ inputValue }}" placeholder="高度自适应" autosize type="textarea" showWordLimit />
+              </view>
+          </view>
+          <view class="page-section">
+              <view class="page-section-title">长度限制</view>
+              <view>
+                  <maui-field label="input类型" value="{{ inputValue1 }}" placeholder="长度限制" showWordLimit maxlength="10" />
+                  <maui-field label="textarea" value="{{ textareaValue }}" placeholder="长度限制" autosize showWordLimit autosize type="textarea" />
+              </view>
+          </view>
+          <view class="page-section">
+              <view class="page-section-title">聚焦和失焦</view>
+              <view>
+                  <maui-field label="input类型" value="{{ inputValue3 }}" placeholder="聚焦和失焦" bindfocus="inputFocusChange" bindblur="inputBlurChange" />
+                  <maui-field label="textarea" value="{{ textareaValue2 }}" placeholder="行数变化和聚焦失焦" autosize autosize type="textarea" bindlinechange="lineChange" bindfocus="focusChange" bindblur="blurChange" />
+              </view>
+          </view>
+      </view>
+      <template is="foot" />
+  </view>
+

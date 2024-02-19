@@ -1,0 +1,14 @@
+{
+  "entryPagePath": "pages/map-test-cases/index",
+  "pages": ["pages/index/index", "pages/map-test-cases/index", "pages/field/field"],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Macle",
+    "navigationBarTextStyle": "black",
+    "capsuleTheme": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "skeleton": { "config": { "timeout": 600 }, "page": { "pages/simple-map/index": "pages/simple-map/index.sk" } }
+}
